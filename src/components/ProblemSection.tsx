@@ -6,21 +6,21 @@ import { ShieldAlert, DollarSign, MapPin } from "lucide-react";
 const problems = [
   {
     icon: DollarSign,
-    title: "Inflated Foreigner Prices",
+    title: "You overpay for everything",
     description:
-      "Tourists routinely pay 3x–5x more for hotels, guides, and souvenirs. Without a local insider, you're an easy target.",
+      "Taxi drivers, market vendors, restaurants — the &ldquo;foreigner price&rdquo; is real and it&apos;s expensive.",
   },
   {
     icon: MapPin,
-    title: "No Trusted Local Guidance",
+    title: "You don&apos;t know who to trust",
     description:
-      "Finding reliable drivers, authentic restaurants, and safe neighborhoods is a gamble when you don't know who to trust.",
+      "Fake guides, scam hotels, unsafe routes. Without a local, every decision feels like a gamble.",
   },
   {
     icon: ShieldAlert,
-    title: "Missing the Real Ethiopia",
+    title: "You miss the real Ethiopia",
     description:
-      "Tour buses and scripted tours keep you behind glass. The vibrant culture, hidden cafes, and genuine hospitality stay out of reach.",
+      "The places worth seeing aren&apos;t on TripAdvisor. The food worth eating isn&apos;t near your hotel.",
   },
 ];
 
@@ -37,12 +37,13 @@ export default function ProblemSection() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-white mb-6">
-            Travel in Ethiopia{" "}
-            <span className="text-brand-amber-400">Shouldn&apos;t Be This Hard</span>
+            Why Most Visitors{" "}
+            <span className="text-brand-amber-400">Get It Wrong</span>
           </h2>
           <p className="text-lg text-brand-dark-300">
-            Every traveler we meet tells the same story. Ethiopia is incredible
-            — but the barrier to entry is real.
+            Everything amazing about Ethiopia is hidden behind a wall of inflated
+            prices, bad information, and tourist traps. Here&apos;s what you&apos;re
+            actually up against.
           </p>
         </motion.div>
 

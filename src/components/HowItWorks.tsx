@@ -6,30 +6,30 @@ import { Phone, ClipboardCheck, Smile } from "lucide-react";
 const steps = [
   {
     icon: Phone,
-    title: "Book a Call",
+    title: "Book a Free Call",
     description:
-      "Hop on a free video call with us. Tell us your travel dreams, budget, and timeline — no commitment, just conversation.",
+      "Tell us your dates, budget and what excites you. We&apos;ll take it from there.",
     step: "01",
   },
   {
     icon: ClipboardCheck,
     title: "We Plan Everything",
     description:
-      "We craft a custom itinerary, negotiate local prices, book vetted drivers, and set up your daily schedule. You approve every detail.",
+      "Accommodation, transport, food, safety. Every detail sorted before you land.",
     step: "02",
   },
   {
     icon: Smile,
-    title: "You Show Up",
+    title: "You Just Show Up",
     description:
-      "Land in Ethiopia and relax. Your personal fixer handles logistics, translates, and ensures every experience is authentic and safe.",
+      "We meet you at the airport. From that moment, Ethiopia is yours to enjoy.",
     step: "03",
   },
 ];
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-24 lg:py-32 bg-brand-dark-900">
+    <section id="how-it-works" className="py-24 lg:py-32 bg-brand-dark-900 scroll-mt-16 lg:scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -39,11 +39,9 @@ export default function HowItWorks() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-white mb-6">
-            How It Works
+            Three steps.{" "}
+            <span className="text-brand-amber-400">Zero stress.</span>
           </h2>
-          <p className="text-lg text-brand-dark-300">
-            Three simple steps to an unforgettable Ethiopian adventure.
-          </p>
         </motion.div>
 
         {/* Steps */}

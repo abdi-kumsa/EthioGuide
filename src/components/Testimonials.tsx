@@ -5,21 +5,21 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sarah M.",
-    location: "London, UK",
-    text: "I was nervous traveling to Ethiopia solo as a woman. Abdi and his team checked in daily, arranged safe transport, and introduced me to the most incredible local artisans. I never felt alone.",
+    name: "Sarah",
+    location: "UK",
+    text: "I was nervous about coming to Ethiopia alone. Abdi met me at the airport and from that second I never felt unsafe. Best decision I ever made.",
     rating: 5,
   },
   {
-    name: "James K.",
-    location: "Melbourne, Australia",
-    text: "The pricing difference was insane. Hotels quoted me $200/night online — EthioGuard got me the same room for $65. They saved me over $1,200 on a 10-day trip.",
+    name: "James",
+    location: "USA",
+    text: "They took me to places I never would have found myself. The food, the people, the landscapes — it was nothing like I expected. In the best way.",
     rating: 5,
   },
   {
-    name: "Priya R.",
-    location: "Toronto, Canada",
-    text: "We did the Eco Adventure package and it was life-changing. Trekking Simien Mountains with a guide who grew up in the village below? That's something no tour company can give you.",
+    name: "Lea",
+    location: "France",
+    text: "Every single Birr was accounted for. I never once felt like I was being taken advantage of. That trust is everything when you&apos;re traveling somewhere new.",
     rating: 5,
   },
 ];
@@ -36,10 +36,11 @@ export default function Testimonials() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-white mb-6">
-            Trusted by Travelers
+            Real trips.{" "}
+            <span className="text-brand-amber-400">Real people.</span>
           </h2>
           <p className="text-lg text-brand-dark-300">
-            Real stories from people who traveled with EthioGuard.
+            Don&apos;t take our word for it — here&apos;s what past clients say.
           </p>
         </motion.div>
 
@@ -82,6 +83,12 @@ export default function Testimonials() {
             </motion.div>
           ))}
         </div>
+
+        {/* Placeholder note */}
+        <p className="text-center text-xs text-brand-dark-500 mt-10 max-w-lg mx-auto italic">
+          Note: These are placeholder testimonials. Replace with real client
+          quotes when available.
+        </p>
       </div>
     </section>
   );

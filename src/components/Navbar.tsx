@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Menu, X, Phone } from "lucide-react";
 import { useState } from "react";
@@ -10,7 +11,7 @@ const navLinks = [
   { href: "#packages", label: "Packages" },
   { href: "#promise", label: "Our Promise" },
   { href: "#meet-us", label: "Meet Us" },
-  { href: "#book", label: "Book" },
+  { href: "#book", label: "Book Now" },
 ];
 
 export default function Navbar() {
@@ -22,15 +23,14 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-brand-teal-600 flex items-center justify-center text-white font-bold text-sm">
-              EG
-            </div>
-            <div className="hidden sm:block">
-              <span className="font-serif text-xl text-white">EthioGuard</span>
-              <span className="block text-[10px] text-brand-amber-400 tracking-widest uppercase -mt-1">
-                Your Guide. Your Guard.
-              </span>
-            </div>
+            <Image
+              src="/images/logo.jpg"
+              alt="EthioGuard"
+              width={120}
+              height={40}
+              className="h-10 w-auto object-contain"
+              priority
+            />
           </Link>
 
           {/* Desktop Nav */}
@@ -44,13 +44,15 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="#book"
+            <a
+              href="https://calendly.com/kumsaaabdii/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-brand-teal-600 hover:bg-brand-teal-500 text-white px-5 py-2.5 rounded-lg text-sm font-medium transition-all hover:shadow-lg hover:shadow-brand-teal-600/25"
             >
               <Phone className="w-4 h-4" />
               Book a Free Call
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -82,13 +84,15 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <Link
-            href="#book"
+          <a
+            href="https://calendly.com/kumsaaabdii/30min"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setMobileOpen(false)}
             className="block text-center bg-brand-teal-600 hover:bg-brand-teal-500 text-white px-5 py-3 rounded-lg text-sm font-medium transition-all"
           >
             Book a Free Call
-          </Link>
+          </a>
         </div>
       </div>
     </nav>

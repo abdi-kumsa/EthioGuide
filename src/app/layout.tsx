@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import { cn } from "@/lib/utils";
+import FloatingContact from "@/components/FloatingContact";
 import "./globals.css";
 
 const inter = Inter({
@@ -43,6 +44,7 @@ export default function RootLayout({
         )}
       >
         {children}
+        <FloatingContact />
       </body>
     </html>
   );
