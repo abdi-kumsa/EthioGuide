@@ -25,7 +25,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-3">
             <Image
               src="/images/logo.jpg"
-              alt="EthioGuard"
+              alt="EthioGuide"
               width={120}
               height={40}
               className="h-10 w-auto object-contain"

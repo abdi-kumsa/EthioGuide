@@ -16,7 +16,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-3 mb-4">
               <Image
                 src="/images/logo.jpg"
-                alt="EthioGuard"
+                alt="EthioGuide"
                 width={140}
                 height={44}
                 className="h-11 w-auto object-contain"
@@ -82,11 +82,11 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="mailto:hello@ethioguard.com"
+                  href="mailto:hello@ethioguide.com"
                   className="flex items-center gap-2 text-sm text-brand-dark-400 hover:text-brand-teal-400 transition-colors"
                 >
                   <Mail className="w-4 h-4" />
-                  hello@ethioguard.com
+                  hello@ethioguide.com
                 </Link>
               </li>
             </ul>
@@ -97,7 +97,7 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-brand-dark-800/50 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2 text-sm text-brand-dark-500">
             <Shield className="w-4 h-4" />
-            <span>&copy; 2026 EthioGuard. All rights reserved.</span>
+            <span>&copy; 2026 EthioGuide. All rights reserved.</span>
           </div>
           <div className="flex items-center gap-4">
             <Link

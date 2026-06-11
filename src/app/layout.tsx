@@ -17,14 +17,14 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "EthioGuard — Your Guide. Your Guard.",
+  title: "EthioGuide — Your Guide. Your Guard.",
   description:
     "Experience Ethiopia with complete confidence. Local guides, fair pricing, and authentic experiences — curated just for you.",
   openGraph: {
-    title: "EthioGuard — Your Guide. Your Guard.",
+    title: "EthioGuide — Your Guide. Your Guard.",
     description:
       "Experience Ethiopia with complete confidence. Local guides, fair pricing, and authentic experiences.",
-    siteName: "EthioGuard",
+    siteName: "EthioGuide",
     type: "website",
   },
 };
