@@ -8,7 +8,7 @@ const steps = [
     icon: Phone,
     title: "Book a Free Call",
     description:
-      "Tell us your dates, budget and what excites you. We&apos;ll take it from there.",
+      "Tell us your dates, budget and what excites you. We’ll take it from there.",
     step: "01",
   },
   {

@@ -1,23 +1,35 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect, useCallback, useRef } from "react";
+import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import { ArrowDown, Shield } from "lucide-react";
 import Image from "next/image";
+import img1 from "../../public/images/IMG_5434.jpg";
+import img2 from "../../public/images/IMG_5440.jpg";
+import img3 from "../../public/images/IMG_5432.jpg";
+import img4 from "../../public/images/IMG_5450.jpg";
+import img5 from "../../public/images/IMG_5433.jpg";
 
 const heroImages = [
-  { src: "/images/IMG_5434.JPG", alt: "Ethiopian landscape" },
-  { src: "/images/IMG_5440.JPG", alt: "Ethiopian scenery" },
-  { src: "/images/IMG_5432.JPG", alt: "Ethiopian culture" },
-  { src: "/images/IMG_5450.jpg", alt: "Ethiopian experience" },
-  { src: "/images/IMG_5433.JPG", alt: "Ethiopian travel" },
+  { src: img1, alt: "Ethiopian landscape" },
+  { src: img2, alt: "Ethiopian scenery" },
+  { src: img3, alt: "Ethiopian culture" },
+  { src: img4, alt: "Ethiopian experience" },
+  { src: img5, alt: "Ethiopian travel" },
 ];
 
 export default function HeroSection() {
   const [currentImage, setCurrentImage] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const [bgLoaded, setBgLoaded] = useState(false);
+
+  const ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
 
   const nextImage = useCallback(() => {
     setCurrentImage((prev) => (prev + 1) % heroImages.length);
@@ -30,31 +42,33 @@ export default function HeroSection() {
   }, [nextImage]);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 lg:pt-20">
-      {/* Sliding Image Background */}
-      <AnimatePresence>
-        <motion.div
-          key={currentImage}
-          initial={{ opacity: 0, scale: 1.1 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1.2, ease: "easeInOut" }}
-          className="absolute inset-0"
-        >
-          <Image
-            src={heroImages[currentImage].src}
-            alt={heroImages[currentImage].alt}
-            fill
-            className={`object-cover transition-opacity duration-500 ${
-              bgLoaded ? "opacity-100" : "opacity-0"
-            }`}
-            priority
-            sizes="100vw"
-            quality={90}
-            onLoad={() => setBgLoaded(true)}
-          />
-        </motion.div>
-      </AnimatePresence>
+    <section ref={ref} className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 lg:pt-20">
+      {/* Sliding Image Background with Parallax */}
+      <motion.div style={{ y }} className="absolute inset-0">
+        <AnimatePresence>
+          <motion.div
+            key={currentImage}
+            initial={{ opacity: 0, scale: 1.1 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.2, ease: "easeInOut" }}
+            className="absolute inset-0"
+          >
+            <Image
+              src={heroImages[currentImage].src}
+              alt={heroImages[currentImage].alt}
+              fill
+              className={`object-cover transition-opacity duration-500 ${
+                bgLoaded ? "opacity-100" : "opacity-0"
+              }`}
+              priority
+              sizes="100vw"
+              quality={90}
+              onLoad={() => setBgLoaded(true)}
+            />
+          </motion.div>
+        </AnimatePresence>
+      </motion.div>
 
       {/* Gradient overlays for readability */}
       <div className="absolute inset-0 bg-gradient-to-t from-brand-dark-950 via-brand-dark-950/80 to-brand-dark-950/60" />
@@ -87,14 +101,14 @@ export default function HeroSection() {
           {/* Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-white leading-tight mb-6 drop-shadow-lg">
             Ethiopia Is Everything{" "}
-            <span className="text-brand-amber-400">You&apos;ve Heard</span>
+            <span className="text-brand-amber-400">You’ve Heard</span>
             <br />
             — And Nothing Like You Expected
           </h1>
 
           {/* Subheadline */}
           <p className="max-w-2xl mx-auto text-lg sm:text-xl text-brand-dark-200 leading-relaxed mb-8 drop-shadow-md">
-            We&apos;re your local fixers. We handle everything so you experience
+            We’re your local fixers. We handle everything so you experience
             everything.
           </p>
 
@@ -105,7 +119,7 @@ export default function HeroSection() {
                 href="#book"
                 className="inline-flex items-center gap-2 bg-brand-teal-600 hover:bg-brand-teal-500 text-white px-8 py-4 rounded-xl text-lg font-medium transition-all hover:shadow-xl hover:shadow-brand-teal-600/30 hover:-translate-y-0.5"
               >
-                Book a Free Call — It&apos;s 100% Free
+                Book a Free Call — It’s 100% Free
               </Link>
               <span className="text-sm text-brand-dark-400">
                 No commitment. Just a conversation.

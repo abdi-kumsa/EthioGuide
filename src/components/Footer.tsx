@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Shield, Mail, MessageCircle } from "lucide-react";
+import logoImg from "../../public/images/logo.jpg";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -15,7 +16,7 @@ export default function Footer() {
           <div className="sm:col-span-2 lg:col-span-2">
             <Link href="/" className="flex items-center gap-3 mb-4">
               <Image
-                src="/images/logo.jpg"
+                src={logoImg}
                 alt="EthioGuide"
                 width={140}
                 height={44}

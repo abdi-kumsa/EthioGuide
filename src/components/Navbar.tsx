@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Menu, X, Phone } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import logoImg from "../../public/images/logo.jpg";
 
 const navLinks = [
   { href: "#how-it-works", label: "How It Works" },
@@ -24,7 +25,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
             <Image
-              src="/images/logo.jpg"
+              src={logoImg}
               alt="EthioGuide"
               width={120}
               height={40}

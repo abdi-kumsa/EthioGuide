@@ -19,7 +19,7 @@ const testimonials = [
   {
     name: "Lea",
     location: "France",
-    text: "Every single Birr was accounted for. I never once felt like I was being taken advantage of. That trust is everything when you&apos;re traveling somewhere new.",
+    text: "Every single Birr was accounted for. I never once felt like I was being taken advantage of. That trust is everything when you’re traveling somewhere new.",
     rating: 5,
   },
 ];
@@ -40,7 +40,7 @@ export default function Testimonials() {
             <span className="text-brand-amber-400">Real people.</span>
           </h2>
           <p className="text-lg text-brand-dark-300">
-            Don&apos;t take our word for it — here&apos;s what past clients say.
+            Don’t take our word for it — here’s what past clients say.
           </p>
         </motion.div>
 
@@ -56,7 +56,7 @@ export default function Testimonials() {
             >
               <Quote className="w-8 h-8 text-brand-teal-600/30 mb-4" />
               <p className="text-brand-dark-200 leading-relaxed mb-6">
-                &ldquo;{item.text}&rdquo;
+                “{item.text}”
               </p>
               <div className="flex items-center justify-between pt-4 border-t border-brand-dark-700/50">
                 <div>

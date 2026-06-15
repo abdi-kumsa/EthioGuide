@@ -8,11 +8,11 @@ const problems = [
     icon: DollarSign,
     title: "You overpay for everything",
     description:
-      "Taxi drivers, market vendors, restaurants — the &ldquo;foreigner price&rdquo; is real and it&apos;s expensive.",
+      "Taxi drivers, market vendors, restaurants — the “foreigner price” is real and it’s expensive.",
   },
   {
     icon: MapPin,
-    title: "You don&apos;t know who to trust",
+    title: "You don’t know who to trust",
     description:
       "Fake guides, scam hotels, unsafe routes. Without a local, every decision feels like a gamble.",
   },
@@ -20,7 +20,7 @@ const problems = [
     icon: ShieldAlert,
     title: "You miss the real Ethiopia",
     description:
-      "The places worth seeing aren&apos;t on TripAdvisor. The food worth eating isn&apos;t near your hotel.",
+      "The places worth seeing aren’t on TripAdvisor. The food worth eating isn’t near your hotel.",
   },
 ];
 
@@ -42,7 +42,7 @@ export default function ProblemSection() {
           </h2>
           <p className="text-lg text-brand-dark-300">
             Everything amazing about Ethiopia is hidden behind a wall of inflated
-            prices, bad information, and tourist traps. Here&apos;s what you&apos;re
+            prices, bad information, and tourist traps. Here’s what you’re
             actually up against.
           </p>
         </motion.div>

@@ -16,11 +16,11 @@ export default function BookCallSection() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-white mb-6">
-            Let&apos;s talk about{" "}
+            Let’s talk about{" "}
             <span className="text-brand-amber-400">your trip</span>
           </h2>
           <p className="text-lg text-brand-dark-300">
-            It&apos;s free. It&apos;s casual. And it might be the best 30
+            It’s free. It’s casual. And it might be the best 30
             minutes you spend before your trip.
           </p>
         </motion.div>
